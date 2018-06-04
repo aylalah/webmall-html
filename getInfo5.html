@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Joytune foam</title>
+	<script type="text/javascript" src="angular.js"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="bootstrap4/css/bootstrap.css">
+	<script type="text/javascript" src="bootstrap4/js/jquery-3.2.1.js"></script>
+	<script type="text/javascript" src="angular.js"></script>
+	<link rel="stylesheet" type="text/css" href="moukasite.css">
+	<style type="text/css">
+		
+	</style>
+</head>
+<body ng-app="myApp">
+	<header class="container">
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top " style="background-color:#25363F; padding: 1px" >
+          <div class="container">
+              <div class="col-md-4">
+                <span class="fa fa-envelope" style="color: white; "><a href="ayoade0369@gmail.com" style="color: white">ayoade0369@gmail.com</a></span>
+              </div>
+              <div class="col-md-4">
+                <span class="fa fa-phone" style="color: white; "><a href="#" style="color: white">+234-076-4196-171</a></span>
+              </div>
+          </div>
+        </nav>
+    
+        <nav class="navbar navbar-inverse fixed-top mt-4 pt-2" style=" background-color:#416270;" >
+            <div class="container  pt-1">               
+                <a class="" href="#"><img src="img/logo.png"></a>
+                     <p class="dropdown pt-2 offset-1 mr-2 ">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"  style="color: white">CATEGORIES</a>        
+                     </p>
+                    <input class="mt-2 mb-2 form-control" type="text" name="search" ng-model="search" placeholder="i am searching for" style="width: 500px">
+                      <div class="offset-1 pt-2" style="color: white;"><h4 > {{pric}}nn </h4> </div> 
+                      <div  class="offset-1 pt-1"><a href=""><img src="img/sell.gif"></a></li></div> 
+                </ul>
+                          
+            </div>
+        </nav>
+    </header>
+    <main ng-controller="hold">
+        <div class="bg-light pt-3 pb-2 pt-5 mt-5">
+    		<center>
+    			<h3 style="font-size: 50px">
+    				<img style="width: 60px" src="img/a.jpg"> Mouka Foam  
+    			</h3><p style="font-size: 13px; margin-top: 10px">Indusral Estate, Lagos</p>
+    			
+    		</center>
+    	</div>
+    	<div class="container">
+    		<p><a href="#"> Home</a> > <a href=""> Mouka Foam</a> > Mouka REGINAL (6 ft by 6 ft 16 inches)(free delivery within Lagos) </p>
+    		<div class="row">
+    			<div class=" mt-3 col-md-4">
+    				<img class="border" src="img/g.jpg" style="width: 400px">
+    				<img class="border mt-2" src="img/g.jpg" style="width: 200px">
+    			</div>
+    			<div class="mt-3 col-md-6 border ml-5 pl-0 pr-0">
+    				<div class="card-title p-2 pl-3" style="background-color:#416270;color: white; font-size:20px ">
+    					Mouka Reginal (6ft by 6ft by 16 inches)...
+    				</div>
+    				<div class="card-body">
+    					<div class="row">
+    						<div class="col-md-6">
+    							<div style="font-size: 18px">
+    								LIST PRICE: <b><del>₦330,000</del></b><br>
+    							OUR PRICE: <b>₦250,179</b><br>
+    							<b>size</b> <input class="form-control" type="text" name="" value="0" disabled="true"> <br>
+    							<b>Quality</b> <select class="form-control">
+    								<option>1</option>
+    								<option>2</option>
+    								<option>3</option>
+    								<option>4</option>
+    							</select>
+    							<button class="btn mt-4 offset-3" style="background-color: #FE9A00">Add to Cart</button>
+    							</div>
+    						</div>
+    						<div class="col-md-6">
+    							<b class="ml-2"><img src="img/mc.png">PAY WITH MASTERCARD</b> <br>
+    							<p align="center">and an additional 10% off</p>
+    							<b class="ml-2"><img src="img/nationwide.png">NATIONWIDE DELIVER</b> <br>
+    							<p align="center">We deliver Nationwide</p>
+    							<b class="ml-2"><img src="img/Contact.png">CONTACT THE MARCHANT</b> <br>
+    							<p align="center">Ask contact the narhm</p>
+    						</div>
+    					</div>    				
+    				</div>
+    					<div class="card-text p-2 pl-3 bg-light" style="background-color:#416270; font-size:20px; margin-top: 400px ">
+    					<a href="#" style="text-align: center;">View size Guide</a>
+    				</div>
+    			</div>
+    			<div class="col-md-10 text-center">
+    				<h5 class="mt-3">PRODUCT DESCRIPTION</h5>
+    				<p class="border mt-3 pt-3 pl-2 pr-2" style="width: 990px; height: 200px; font-size: 14px; text-align: left;">
+    					MOUKA Regal: (6ft*6ft*16") • High quality ORTHOPEDIC mattress made from ultra high density foam covered with quilted premium grade jacquard. • Supports the lower back, lumbar area. • Endorsed by the Nigerian society of Physiotherapy. • 5 year warranty. • Ideal for adults with a combined weight of 290kg and above and also senior citizens. (6ft*6ft*16")
+    				</p>
+    			</div>
+    		</div>
+    			<div class="col-md-2"></div>
+    		</div>
+    	</div><hr class="mt-4">
+    	<div class="container" ng-controller="hold">
+    		<h5 class="mt-4 mb-4">
+    			Related Products
+    		</h5>
+    		<div class="row">
+					<div class="col-md-2 mt-4" ng-model="infom" ng-repeat="x in card|filter:search|orderBy:bring" value="{{x.price}}">
+						<div class="card pb-5 pl-1 pr-1">
+							<div class="card-img-top">
+								<a href="{{x.info}}"><img src="{{x.img}}" class="img-fluid mt-1"></a>
+							</div>
+							<div class="card-body p-3">
+								<div class="row pl-2 pb-1" style="font-size: 12px">
+									{{x.name}}
+								</div>
+								<div class="price row pl-2">
+								{{x.price}} <p class="offset-5 pt-2" style="color: #FD7C22">{{x.buy}}</p>
+								</div>
+								<div class="row mb-0" style="">
+								<img class="pt-1 pl-2" src="img/a.jpg" width="25px" height="23px"> <p class="offset-4" style="color: #5200F1;">MOUKA FOAM</p>
+								</div>
+							</div>
+						</div>
+					</div>	
+				</div>
+    	</div><hr class="mt-4">
+    	<div class="container" ng-controller="hold">
+    		<h5 class="mt-4 mb-4">
+    			More Products From This Merchant
+    		</h5>
+    		<div class="row">
+					<div class="col-md-2 mt-4" ng-model="infom" ng-repeat="x in card|filter:search|orderBy:bring" value="{{x.price}}">
+						<div class="card pb-5 pl-1 pr-1">
+							<div class="card-img-top">
+								<a href="{{x.info}}"><img src="{{x.img}}" class="img-fluid mt-1"></a>
+							</div>
+							<div class="card-body p-3">
+								<div class="row pl-2 pb-1" style="font-size: 12px">
+									{{x.name}}
+								</div>
+								<div class="price row pl-2">
+								{{x.price}} <p class="offset-5 pt-2" style="color: #FD7C22">{{x.buy}}</p>
+								</div>
+								<div class="row mb-0" style="">
+								<img class="pt-1 pl-2" src="img/a.jpg" width="25px" height="23px"> <p class="offset-4" style="color: #5200F1;">MOUKA FOAM</p>
+								</div>
+							</div>
+						</div>
+					</div>	
+				</div>
+    	</div>
+    </main>
+    <footer style=" background-color:#416270">
+        <div class="container">
+        	<p class="pt-5" style="color: white;">
+        	<b>THE WEBMALL STORY</b><br>
+        	<b>WebMall,</b>which launched in 2013, has become one of Nigeria's leading e-commerce platforms in an impressive amount of time. The WebMall site is designed to create the most appealing user experience, for both the customer and the merchant. We provide online and offline tools to promote the businesses of our merchants as well as affordable merchant plans. Our customers have access to an extensive range of high quality products and an excellent logistics service. We offer a wide range of products such as laptops, mobile phones, toys, speakers, sneakers, hair products, chargers, food items, wrist watches, printers and so on.<br><br>
+        	<b>ONLINE SHOPPING ON WEBMALL</b><br>
+        	<b>WebMall</b>customers can shop products from a number of categories - computer & accessories; electronics; home & office appliances; baby, kids & toys; phones & tablets; fashion; food & drink; gifts,books & stationery; pet foods & products; POS & accounting; sports & fitness; beauty, health & personal; movies, games & music and automative & industrial. With over a thousand products available, customers are not only assured of quality, but variety too. Get products delivered directly to your doorstep, anywhere in Nigeria. Enjoy easy and convenient payment by choosing to either pay on delivery or through bank transfer. Merchants are also given the option to pay in instalments. Everything at WebMall is designed around ensuring the customer experience is one of little to no hiccups along the way.<br><br>
+        
+        	Take advantage of the amazing deals we offer regularly, but in particular, be on the lookout for our cyber week deals. For a limited time only - the last week of November - WebMall is offering crazy deals on Sony Bravia LED TV, sound bar with wireless subwoofer, Microsoft Office 365 personal, ruffle open back dress, women lingerie, Samsung LED curved TV, men’s T-Shirts, doormats and so on.<br>
+  			We stock a number of products that are sure to appeal to a wide variety of customers, including yam pounder, fit bit fitness bands, baby clothes, multifunctional lunch box, infinix hot 2 X510, Crea T-shirts, QI wireless pad, pancake pan, selfie sticks, hover board and more. We also boast an impressive collection of international brands such as Apple, ASOS, Kenwood, HP, Samsung, Microsoft, IKEA, Blackberry and so much more.<br><br>
+  			<b>POPULAR PRODUCTS ON WEBMALL?</b><br>
+  			<b>DVD Player -</b>
+  			Kenwood smoothie blender - Canon EOS 700D camera - HP Laser Jet Pro printer - iHome wireless portable recharge speaker - IKEA laundry hamper - Kinelco dry iron - automatic toothpick dispenser - multifunction juicer - twin cereal dispenser - high waist thong shaper - rechargeable lamp - ASOS divide plimsolls - Kenwood microwave oven - Sabichi easy grip pan - Sabichi spaghetti server - Kenwood sandwich maker - Kenwood traditional kettle - Blackberry passport - Blackberry Q5 - Blackberry classic - Kenwood blender - bow tie - brooch - shoe organiser - chopping board
+ 
+        	</p>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+	<script type="text/javascript">
+	var app= angular.module('myApp',[]);
+	app.controller('hold', function($scope)
+	{
+		
+		$scope.card=
+		[
+			{	"name":"MOUKA REGINAL (4FT X 8) ","img":"img/c.jpg","price":"₦58,833.70","buy":"BUY NOW"},
+			{	"name":"MOUKA EXQUISITE (7FT X 12) ","img":"img/d.jpg","price":"₦122,700.70","buy":"BUY NOW"},
+			{	"name":"MOUKA LEGEND (7FT X 9) ","img":"img/e.jpg","price":"₦44,399.55","buy":"BUY NOW","info":"inventrysystem.html"},
+
+			{	"name":"MOUKA REGAL (7FT X 8) ","img":"img/f.jpg","price":"₦140,959.00","buy":"BUY NOW"},
+			{	"name":"MOUKA LEGEND (4FT X 12) ","img":"img/g.jpg","price":"₦55,919.70","buy":"BUY NOW"},
+			{	"name":"MOUKA MONDEO 76FT X 8) ","img":"img/h.jpg","price":"₦84,719.70","buy":"BUY NOW"	},
+
+			{	"name":"MOUKA REGINAL (4FT X 8) ","img":"img/c.jpg","price":"₦58,833.70","buy":"BUY NOW"},
+			{	"name":"MOUKA EXQUISITE (7FT X 12) ","img":"img/d.jpg","price":"₦122,700.70","buy":"BUY NOW"},
+			{	"name":"MOUKA LEGEND (7FT X 9) ","img":"img/e.jpg","price":"₦44,399.55","buy":"BUY NOW"},
+
+			{	"name":"MOUKA REGAL (7FT X 8) ","img":"img/f.jpg","price":"₦140,959.00","buy":"BUY NOW"},
+			{	"name":"MOUKA LEGEND (4FT X 12) ","img":"img/g.jpg","price":"₦55,919.70","buy":"BUY NOW"},
+			{	"name":"MOUKA MONDEO 76FT X 8) ","img":"img/h.jpg","price":"₦84,719.70","buy":"BUY NOW"	},
+			{	"name":"MOUKA MONDEO (6FT X 8) ","img":"img/h.jpg","price":"₦64,719.70","buy":"BUY NOW"},
+			{	"name":"MOUKA FLODY (3FT X 6) ","img":"img/j.jpg","price":"₦24,719.70","buy":"BUY NOW"}
+		];
+
+		$scope.infoo=function(){$scope.pric="#0.00";}
+
+		$scope.lm=function() {$scope.add=6}
+		$scope.ar=function() {$scope.bring="name"}
+		$scope.ap=function() {$scope.bring="price"}
+		
+		// $scope.sub=function()
+		// {
+		// 	var ob= {};
+		// 	ob.name=$scope
+		// }
+	});
+</script>
